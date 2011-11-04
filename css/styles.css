@@ -28,6 +28,33 @@ h2 {
 
 }
 
+.button {
+	background: #cccccc;
+	color: #555555;
+	font-size: 15px;
+	border: 2px #bbbbbb;
+	width: 99%;
+	padding: 6px;
+	margin-top: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.button:hover {
+	background: #cccccc;
+	color: #555555;
+	font-size: 15px;
+	border: 2px #bbbbbb;
+	width: 99%;
+	padding: 6px;
+	margin-top: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 3px 3px 1px #888;
+	-webkit-box-shadow: 3px 3px 1px #888;
+	box-shadow: 3px 3px 1px #888;
+}
+
 fieldset {
 	border: none;
 
