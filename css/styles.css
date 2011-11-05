@@ -5,12 +5,12 @@
 */
 
 html {
-    background-color: #222222;
+    background-color: #e2e2e2;
 }
 
 body {
     font-family: Verdana, Geneva, sans-serif;
-    color: #cccccc;
+    color: #555555;
 }
 
 p {
@@ -19,12 +19,25 @@ p {
 
 h1 {
     background-color: #333333;
-    color: #f1f1f1;
+/*    color: #f1f1f1; */
+    padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;    
 }
 
 h2 {
     background-color: #333333;
     color: #f1f1f1;
+    padding: 10px;    
+	-moz-border-radius: 5px;
+	border-radius: 5px;    
+
+}
+
+fieldset {
+	background: #eeeeee;
+	-moz-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;	
 
 }
 
@@ -32,31 +45,71 @@ h2 {
 	background: #cccccc;
 	color: #555555;
 	font-size: 15px;
-	border: 2px #bbbbbb;
-	width: 99%;
+	border: 2px #808080;
+	width: 100%;
 	padding: 6px;
 	margin-top: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	text-decoration: none;
 }
 
 .button:hover {
 	background: #cccccc;
 	color: #555555;
 	font-size: 15px;
-	border: 2px #bbbbbb;
-	width: 99%;
+	border: 2px #808080;
+	width: 100%;
 	padding: 6px;
 	margin-top: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	-moz-box-shadow: 3px 3px 1px #888;
-	-webkit-box-shadow: 3px 3px 1px #888;
-	box-shadow: 3px 3px 1px #888;
+	-moz-box-shadow: 2px 2px 1px #888;
+	-webkit-box-shadow: 2px 2px 1px #888;
+	box-shadow: 2px 2px 1px #888;
+	text-decoration: none;
 }
 
-fieldset {
-	border: none;
+.float_r {
+	background: #cccccc;
+	color: #555555;
+	font-size: 15px;
+	border: 2px #808080;
+	padding: 6px;
+	margin-top: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	float: right;
+}
+
+.float_r:hover {
+	background: #cccccc;
+	color: #555555;
+	font-size: 15px;
+	border: 2px #808080;
+	padding: 6px;
+	margin-top: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	float: right;
+	-moz-box-shadow: 2px 2px 1px #888;
+	-webkit-box-shadow: 2px 2px 1px #888;
+	box-shadow: 2px 2px 1px #888;
+	text-decoration: none;	
+}
+
+.footer_nav {
+	color: #555555; 
+	font-weight: bold;
 
 }
+
+.logo {
+	color: #00CC00;
+}
+
+
+
 
