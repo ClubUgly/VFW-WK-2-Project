@@ -41,6 +41,11 @@ fieldset {
 
 }
 
+label {
+	display: block;
+	padding: 2px;
+}
+
 .button {
 	background: #cccccc;
 	color: #555555;
@@ -107,7 +112,7 @@ fieldset {
 }
 
 .logo {
-	font-family:Tahoma, Geneva, sans-serif;
+	font-family:Tahoma, Geneva, sans-serif; /* over-ride default font */
 	color: #00CC00;
 }
 
