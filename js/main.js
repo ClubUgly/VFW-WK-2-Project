@@ -7,6 +7,7 @@
 
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function(){
+//	alert(localStorage.value(0));
 
 	//getElementById Function
 	function $(x){
@@ -30,18 +31,82 @@ window.addEventListener("DOMContentLoaded", function(){
 		selectLi.appendChild(makeSelect);
 	}
 	
-	function storeData(){
-		localStorage.setItem("test", "hello");
+	//find value of selected radio buttons.
+	function getSelectedRadio(){
+		var radio = document.forms[0].sex;
+		for(var i=0; i<radio.length; i++){
+			if(radios[i].checked){
+				sexValue = radios[i].value;
+			}
+		}
 	}
 	
+	function getCheckboxValue(){
+		if($('terms').checked){
+			termsValue = $('terms').value;
+		}else{
+			termsValue = "No"
+		}
+	}
+	
+	function storeData(){
+		var id 			= Math.floor(Math.random()*100000001);
+		// collect all form field values and store in an object
+		// object properties contain array with the form label and input value
+		getSelectRadio();
+		getCheckboxValue();
+		var item 			= {};
+			item.fname		= ["Name:", $('fname').value];
+			item.email		= ["Email:", $('email').value];
+			item.url 		= ["Home Page:", $('url').value];
+			//item.sex		= ["Sex:", sexValue];
+			
+			item.borndate 	= ["Date of Birth:", $('borndate').value];
+			item.group 		= ["Group:", $('groups').value];
+			item.range 		= ["Quantity:", $('range').value];
+			item.comments 	= ["Additional Info:", $('comments').value];
+			//item.terms 		= ["TOS:", $('terms').termsValue];
+			//save data into local storage: Use Stringify to convert our object to string
+		localStorage.setItem(id, JSON.stringify(item));
+		alert("Shopping Info Saved!");	
+	}
+	
+	function getData(){
+		//write data from local storage to the browser
+		var makeDiv = document.createElement('div');
+		makeDiv.setAttribute("id", "items");
+		var makeList = document.createElement('ul');
+		makeDiv.appendChild(makeList);
+		document.body.appendChild(makeDiv);
+		for(var i=0, len=localStorage.length; i<len;i++){
+			var makeli = document.createElement('li');
+			makeList.appendChild(makeli);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//Convert the string from local storage value back to an object by usig JSON.parse()
+			var obj = JSON.parse(value);
+			var makeSubList = document.createElement('ul');
+			makeli.appendChild(makeSubList);
+			for(var n in obj){
+				var makeSubli = document.createElement('li');
+				makeSubList.appendChild(makeSubli);
+				var optSubText = obj[n][0]+" "+obj[n][1];
+				makeSubli.innerHTML = optSubText;
+			}
+		}
+	
+	}
 	//Variable defaults
-	var beerSelection = ["--Choose your can of beer--", "Bud Light", "Bud Select", "Sam Adams Cherry", "Sam Adams October Fest", "Corona", "Corona Light", "Milwaukee's Best" ];
+	var beerSelection = ["--Choose your can of beer--", "Bud Light", "Bud Select", "Sam Adams Cherry", "Sam Adams October Fest", "Corona", "Corona Light", "Milwaukee's Best"],
+		sexValue,
+		termsValue = "No"	
+	;
 	makeCats();
 	
 	//Set Link & Submit Click Events
-/*	var displayLink = $('displayLink');
+	var displayLink = $('displayLink');
 	displayLink.addEventListener("click", getData);
-	var clearLink = $('clear');
+	/*var clearLink = $('clear');
 	clearlink.addEventListener("click", clearLocal); */
 	var save = $('submit');
 	save.addEventListener("click", storeData);
