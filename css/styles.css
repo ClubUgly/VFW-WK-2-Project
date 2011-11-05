@@ -19,7 +19,7 @@ p {
 
 h1 {
     background-color: #333333;
-/*    color: #f1f1f1; */
+/*    color: #f1f1f1; Don't need anymore. Added logo class to handle. */
     padding: 10px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;    
@@ -84,8 +84,8 @@ fieldset {
 }
 
 .float_r:hover {
-	background: #cccccc;
-	color: #555555;
+	background: #333333;
+	color: #f1f1f1;
 	font-size: 15px;
 	border: 2px #808080;
 	padding: 6px;
@@ -107,6 +107,7 @@ fieldset {
 }
 
 .logo {
+	font-family:Tahoma, Geneva, sans-serif;
 	color: #00CC00;
 }
 
