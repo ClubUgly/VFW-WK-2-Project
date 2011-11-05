@@ -46,6 +46,10 @@ label {
 	padding: 2px;
 }
 
+legend {
+	font-weight: bold;
+}
+
 .button {
 	background: #cccccc;
 	color: #555555;
@@ -106,8 +110,10 @@ label {
 }
 
 .footer_nav {
-	color: #555555; 
+	color: #555555;
+	font-size: 12px; 
 	font-weight: bold;
+	text-transform: uppercase;
 
 }
 
