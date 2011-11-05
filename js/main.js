@@ -30,6 +30,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		selectLi.appendChild(makeSelect);
 	}
 	
+	function storeData(){
+		localStorage.setItem("test", "hello");
+	}
+	
 	//Variable defaults
 	var beerSelection = ["--Choose your can of beer--", "Bud Light", "Bud Select", "Sam Adams Cherry", "Sam Adams October Fest", "Corona", "Corona Light", "Milwaukee's Best" ];
 	makeCats();
@@ -38,9 +42,9 @@ window.addEventListener("DOMContentLoaded", function(){
 /*	var displayLink = $('displayLink');
 	displayLink.addEventListener("click", getData);
 	var clearLink = $('clear');
-	clearlink.addEventListener("click", clearLocal);
+	clearlink.addEventListener("click", clearLocal); */
 	var save = $('submit');
-	save.addEventListener("click", storeData); */
+	save.addEventListener("click", storeData);
 
 });
 
